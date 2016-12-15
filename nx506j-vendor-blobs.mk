@@ -73,11 +73,20 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/etc/firmware/venus.b04:system/etc/firmware/venus.b04 \
     vendor/nubia/nx506j/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
     vendor/nubia/nx506j/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/coldboot.patch:system/etc/tfa9890/coldboot.patch \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte.config:system/etc/tfa9890/zte.config \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte.patch:system/etc/tfa9890/zte.patch \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte.speaker:system/etc/tfa9890/zte.speaker \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_hq.eq:system/etc/tfa9890/zte_hq.eq \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_hq.preset:system/etc/tfa9890/zte_hq.preset \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_hq_dolby.eq:system/etc/tfa9890/zte_hq_dolby.eq \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_hq_dolby.preset:system/etc/tfa9890/zte_hq_dolby.preset \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_speech.eq:system/etc/tfa9890/zte_speech.eq \
+    vendor/nubia/nx506j/proprietary/etc/tfa9890/zte_speech.preset:system/etc/tfa9890/zte_speech.preset \
     vendor/nubia/nx506j/proprietary/bin/mm-qcamera-app:system/bin/mm-qcamera-app \
     vendor/nubia/nx506j/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
     vendor/nubia/nx506j/proprietary/lib/hw/camera.msm8974.so:system/lib/hw/camera.msm8974.so \
     vendor/nubia/nx506j/proprietary/lib/libqomx_core.so:system/lib/libqomx_core.so \
-    vendor/nubia/nx506j/proprietary/lib/libOmxVdecHevc.so:system/lib/libOmxVdecHevc.so \
     vendor/nubia/nx506j/proprietary/lib/libchromatix_imx135_069_liveshot.so:system/lib/libchromatix_imx135_069_liveshot.so \
     vendor/nubia/nx506j/proprietary/lib/libchromatix_imx135_front_liveshot.so:system/lib/libchromatix_imx135_front_liveshot.so \
     vendor/nubia/nx506j/proprietary/lib/libchromatix_imx135_gbao_lc898122_liveshot.so:system/lib/libchromatix_imx135_gbao_lc898122_liveshot.so \
@@ -100,6 +109,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/lib/libImageAlogrithm.so:system/lib/libImageAlogrithm.so \
     vendor/nubia/nx506j/proprietary/lib/libSFB.so:system/lib/libSFB.so \
     vendor/nubia/nx506j/proprietary/lib/libbuffer_manager.so:system/lib/libbuffer_manager.so \
+    vendor/nubia/nx506j/proprietary/lib/libtfa9890_interface.so:system/lib/libtfa9890_interface.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so:system/vendor/lib/egl/libGLESv1_CM_adreno.so \
@@ -109,10 +119,10 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    vendor/nubia/nx506j/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libWVphoneAPI.so:system/vendor/lib/libWVphoneAPI.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    vendor/nubia/nx506j/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/soundfx/libqcbassboost.so:system/vendor/lib/soundfx/libqcbassboost.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/soundfx/libqcreverb.so:system/vendor/lib/soundfx/libqcreverb.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/soundfx/libqcvirt.so:system/vendor/lib/soundfx/libqcvirt.so \
@@ -136,7 +146,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
     vendor/nubia/nx506j/proprietary/lib/hw/sensors.oem.so:system/lib/hw/sensors.oem.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/hw/sensors.msm8974.so:system/vendor/lib/hw/sensors.msm8974.so \
-    vendor/nubia/nx506j/proprietary/bin/thermal-engine:system/bin/thermal-engine \
+    vendor/nubia/nx506j/proprietary/vendor/bin/thermal-engine:system/vendor/bin/thermal-engine \
     vendor/nubia/nx506j/proprietary/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_I2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_I2C_NCD_Signed_configdata.ncd \
     vendor/nubia/nx506j/proprietary/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_I2C_NCD_Unsigned_configdata.ncd:system/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_I2C_NCD_Unsigned_configdata.ncd \
     vendor/nubia/nx506j/proprietary/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_PreI2C_NCD_Signed_configdata.ncd:system/vendor/firmware/BCM20791B5_002.006.013.0011.0076_Generic_PreI2C_NCD_Signed_configdata.ncd \
@@ -177,13 +187,11 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/vendor/lib/libadiertac.so:system/vendor/lib/libadiertac.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libadreno_utils.so:system/vendor/lib/libadreno_utils.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libadsprpc.so:system/vendor/lib/libadsprpc.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libalarmservice_jni.so:system/vendor/lib/libalarmservice_jni.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libaudcal.so:system/vendor/lib/libaudcal.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libbtnv.so:system/vendor/lib/libbtnv.so \
+    vendor/nubia/nx506j/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libC2D2.so:system/vendor/lib/libC2D2.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libc2d30-a3xx.so:system/vendor/lib/libc2d30-a3xx.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libc2d30-a4xx.so:system/vendor/lib/libc2d30-a4xx.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libc2d30.so:system/vendor/lib/libc2d30.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libCB.so:system/vendor/lib/libCB.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libchromatix_imx132_common.so:system/vendor/lib/libchromatix_imx132_common.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libchromatix_imx132_default_video.so:system/vendor/lib/libchromatix_imx132_default_video.so \
@@ -506,12 +514,7 @@ PRODUCT_COPY_FILES += \
     vendor/nubia/nx506j/proprietary/vendor/lib/libnetmgr.so:system/vendor/lib/libnetmgr.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libNimsWrap.so:system/vendor/lib/libNimsWrap.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/liboemcamera.so:system/vendor/lib/liboemcamera.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxAacDec.so:system/vendor/lib/libOmxAacDec.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxAmrwbplusDec.so:system/vendor/lib/libOmxAmrwbplusDec.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxEvrcDec.so:system/vendor/lib/libOmxEvrcDec.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxMux.so:system/vendor/lib/libOmxMux.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxQcelp13Dec.so:system/vendor/lib/libOmxQcelp13Dec.so \
-    vendor/nubia/nx506j/proprietary/vendor/lib/libOmxWmaDec.so:system/vendor/lib/libOmxWmaDec.so \
+    vendor/nubia/nx506j/proprietary/vendor/lib/libOpenCL.so:system/vendor/lib/libOpenCL.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libperipheral_client.so:system/vendor/lib/libperipheral_client.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libpfecommon.so:system/vendor/lib/libpfecommon.so \
     vendor/nubia/nx506j/proprietary/vendor/lib/libprofiler_msmadc.so:system/vendor/lib/libprofiler_msmadc.so \
