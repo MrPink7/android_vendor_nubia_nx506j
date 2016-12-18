@@ -76,6 +76,11 @@ if [ -e "/sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_g
 	ln -s /sys/bus/ttsp4/devices/main_ttsp_core.cyttsp4_i2c_adapter/easy_wakeup_gesture /data/tp/easy_wakeup_gesture
 fi
 
+if [ -e "/sys/bus/ttsp4/drivers/cyttsp4_btn/cyttsp4_btn.main_ttsp_core/button" ]; then
+	chown system:system /sys/bus/ttsp4/drivers/cyttsp4_btn/cyttsp4_btn.main_ttsp_core/button
+	ln -s /sys/bus/ttsp4/drivers/cyttsp4_btn/cyttsp4_btn.main_ttsp_core/button /data/tp/keypad_enable
+fi
+
 # ==============================================================================
 # Synaptics S3208 S3508
 
@@ -134,3 +139,7 @@ if [ -e "/sys/bus/ttsp5/devices/cyttsp5_mt.main_ttsp_core/hall_mode" ]; then
 	ln -s /sys/bus/ttsp5/devices/cyttsp5_mt.main_ttsp_core/hall_mode /data/tp/hall_mode
 fi
 
+if [ -e "/sys/bus/ttsp5/drivers/cyttsp5_btn/cyttsp5_btn.main_ttsp_core/button" ]; then
+	chown system:system /sys/bus/ttsp5/drivers/cyttsp5_btn/cyttsp5_btn.main_ttsp_core/button
+	ln -s /sys/bus/ttsp5/drivers/cyttsp5_btn/cyttsp5_btn.main_ttsp_core/button /data/tp/keypad_enable
+fi
